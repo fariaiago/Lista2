@@ -49,10 +49,15 @@ public class Voo {
 	public Data getData() {
 		return dataVoo;
 	}
+
+	public Voo setCadeiras(boolean[] cadeiras) {
+		this.cadeiras = cadeiras;
+		return this;
+	}
 	
 	@Override
 	public Voo clone() {
-		return new Voo(numVoo, dataVoo.clone());
+		return new Voo(numVoo, dataVoo.clone()).setCadeiras(this.cadeiras.clone());
 	}
 }
 
